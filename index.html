@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#002f69" />
+  <meta name="description" content="La Ola Marina — carta interactiva con carrito de pedidos de ceviches, dúos, tríos, platos criollos y bebidas." />
+  <title>La Ola Marina · Cevichería</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/menu.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="topbar"><span>✳</span> La Ola Marina · Sabor peruano con frescura de mar <span class="topbar-sep">✳</span> <span id="topHours">Horario por confirmar</span></div>
+  <header class="header" id="inicio">
+    <div class="wrap header-inner">
+      <a class="brand" href="#inicio" aria-label="La Ola Marina, volver al inicio">
+        <img class="brand-logo" src="img/logo-la-ola-marina.png" alt="La Ola Marina" width="106" height="91"/>
+      </a>
+      <nav class="nav" aria-label="Navegación principal"><a href="#carta" class="active">La carta</a><a href="#compartir">Para compartir</a><a href="#nosotros">Nosotros</a></nav>
+      <button class="cart-trigger" id="cartTrigger" aria-label="Abrir carrito de compras" aria-haspopup="dialog" aria-controls="cartDrawer"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.5 13h12l2.5-9H6"/></svg><span class="cart-name">Mi pedido</span><span class="cart-count" id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Promociones destacadas">
+      <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+      <div class="wrap hero-grid">
+        <div class="hero-copy" id="heroCopy" aria-live="polite">
+          <div class="eyebrow"><span class="sparkle">✳</span> <span id="heroKicker">UN FESTIVAL DE FRESCURA</span></div>
+          <h1><span id="heroFirst">El sabor del</span><br /><em id="heroAccent">mar</em><br /><span id="heroLast">te llama.</span></h1>
+          <p id="heroText">Ceviches que enamoran, combinaciones para compartir y ese toque peruano que siempre provoca.</p>
+          <a href="#carta" class="btn btn-primary" id="heroCta">Explorar la carta <span aria-hidden="true">↗</span></a>
+          <div class="hero-bottom"><div class="hero-pagination" id="heroPagination" aria-label="Elegir banner"></div><span id="heroIndex" class="hero-index">01 / 03</span></div>
+        </div>
+        <div class="hero-visual" id="heroVisual">
+          <div class="hero-splash"></div>
+          <div class="hero-photo-wrap"><img id="heroPhoto" src="img/plato-c1.svg" alt="Ceviche peruano fresco" fetchpriority="high" /></div>
+          <span class="floating-badge badge-top"><span class="badge-star">✳</span> <span id="heroTag">Hecho para antojar</span></span>
+          <span class="floating-badge badge-bottom"><span>100%</span><small>SABOR PERUANO</small></span>
+          <div class="hero-arrows"><button id="prevSlide" aria-label="Anterior banner">←</button><button id="nextSlide" aria-label="Siguiente banner">→</button></div>
+        </div>
+      </div>
+      <div class="hero-side-note">FRESCO · SABROSO · PERUANO</div>
+    </section>
+
+    <div class="ticker" aria-hidden="true"><div class="ticker-track"> <span>✳ EL MAR ESTÁ SERVIDO</span><span>✳ SABOR QUE PROVOCA</span><span>✳ EL MAR ESTÁ SERVIDO</span><span>✳ SABOR QUE PROVOCA</span><span>✳ EL MAR ESTÁ SERVIDO</span><span>✳ SABOR QUE PROVOCA</span></div></div>
+
+    <section class="intro wrap" id="carta">
+      <div class="intro-head"><div><p class="section-kicker"><span class="dot"></span> HECHO PARA ANTOJAR</p><h2>Elige tu <em>favorito.</em></h2><p>Descubre tus favoritos, agrégalos al carrito y arma tu pedido.</p></div><div class="intro-stamp" aria-hidden="true"><span>MAR & SABOR</span><strong>✺</strong><span>HECHO EN PERÚ</span></div></div>
+      <div class="category-nav" id="categoryNav" aria-label="Categorías de la carta"></div>
+      <div class="menu-root" id="menuRoot"></div>
+    </section>
+
+    <section class="bottom-banner" id="nosotros"><div class="wrap bottom-inner"><div class="bottom-icon" aria-hidden="true">✳</div><div><div class="bottom-kicker">TODO LISTO PARA TU ANTOJO</div><h2>Una buena mesa empieza<br/>con un <em>buen pedido.</em></h2><p>Elige tus platos favoritos, personaliza tu pedido y compártelo por WhatsApp.</p></div><button class="btn btn-dark" id="bottomCart">Armar mi pedido <span>↗</span></button></div></section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><div class="footer-brand"><img class="footer-logo" src="img/logo-la-ola-marina.png" alt="La Ola Marina"/><small>Una ola de sabor en cada plato.</small></div><div><span id="footerAddress">Dirección por configurar</span><br/><span id="footerHours">Lun – Dom · 11:00 a. m. – 6:00 p. m.</span></div><div class="footer-right"><span>Fotografías ilustrativas · Carta demostrativa</span><span class="blink-brand">Un menú de <b>Blink.</b></span></div></div></footer>
+
+  <button class="mobile-cart" id="mobileCart" aria-label="Ver carrito"><span>🛒 <b id="mobileCount">0</b> productos</span><strong id="mobileTotal">S/ 0.00</strong> <span>Ver pedido →</span></button>
+
+  <div class="overlay" id="drawerOverlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" aria-hidden="true" tabindex="-1">
+    <div class="drawer-head"><div><p class="drawer-eyebrow">YA CASI ESTÁ LISTO</p><h2 id="cartTitle">Tu pedido <span>✳</span></h2></div><button class="close-icon" id="closeCart" aria-label="Cerrar carrito">×</button></div>
+    <div class="drawer-scroll"><div id="cartItems" class="cart-items"></div><div class="cart-summary" id="cartSummary"></div>
+      <form id="checkoutForm" class="checkout-form" novalidate>
+        <div class="form-title"><span>01</span> Tus datos</div><label>Nombre y apellido <strong>*</strong><input id="customerName" type="text" placeholder="¿A nombre de quién va?" autocomplete="name" required maxlength="70"/></label>
+        <label>Celular <strong>*</strong><input id="customerPhone" type="tel" placeholder="Tu número de contacto" autocomplete="tel" required minlength="7" maxlength="20"/></label>
+        <div class="form-title"><span>02</span> ¿Cómo lo recibes?</div>
+        <div class="fulfillment-pills" id="fulfillmentPills"><label><input type="radio" name="fulfillment" value="delivery" checked/><span>🛵 Delivery</span></label><label><input type="radio" name="fulfillment" value="recojo"/><span>🏬 Recojo</span></label><label><input type="radio" name="fulfillment" value="preparar"/><span>🕒 Preparar</span></label></div>
+        <div id="deliveryFields"><label>Dirección de entrega <strong>*</strong><input id="deliveryAddress" type="text" placeholder="Calle, número, distrito, referencia" autocomplete="street-address" maxlength="180"/></label><p class="form-hint">El costo del delivery se confirma con el local.</p></div>
+        <div id="pickupFields" hidden><label>Sede de recojo <strong>*</strong><select id="pickupBranch"></select></label><label>Hora de recojo <strong>*</strong><input id="pickupTime" type="time"/></label></div>
+        <div class="form-title"><span>03</span> Método de pago</div>
+        <div class="payment-options" id="paymentOptions"><label><input type="radio" name="payment" value="Yape" checked/><span class="payment-mark yape">Y</span><span>Yape</span><i>✓</i></label><label><input type="radio" name="payment" value="Plin"/><span class="payment-mark plin">P</span><span>Plin</span><i>✓</i></label><label><input type="radio" name="payment" value="Efectivo"/><span class="payment-mark cash">S/</span><span>Efectivo</span><i>✓</i></label><label><input type="radio" name="payment" value="Transferencia"/><span class="payment-mark transfer">↗</span><span>Transferencia</span><i>✓</i></label><label><input type="radio" name="payment" value="Contraentrega"/><span class="payment-mark deliver">▣</span><span>Contraentrega</span><i>✓</i></label></div>
+        <label>Nota general <span class="optional">(opcional)</span><textarea id="checkoutNote" rows="2" maxlength="250" placeholder="¿Alguna indicación para tu pedido?"></textarea></label>
+      </form>
+    </div>
+    <div class="drawer-footer"><div class="total-row"><span>Total de productos</span><strong id="finalTotal">S/ 0.00</strong></div><button id="sendOrder" class="send-order">Enviar pedido por WhatsApp <span>↗</span></button><p>El pedido se confirmará directamente con el local.</p></div>
+  </aside>
+
+  <div class="overlay modal-overlay" id="productOverlay" hidden></div>
+  <div class="product-modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalProductName" aria-hidden="true" tabindex="-1"><button class="close-icon modal-close" id="closeProduct" aria-label="Cerrar producto">×</button><div class="modal-img" id="modalImg"></div><div class="modal-body"><p class="section-kicker"><span class="dot"></span> HAZLO A TU GUSTO</p><h2 id="modalProductName"></h2><p id="modalDesc"></p><div id="spicyGroup"><strong>¿Qué tan picante?</strong><div class="spicy-select"><label><input type="radio" name="spicy" value="Sin picante" checked/><span>🍋 Suave</span></label><label><input type="radio" name="spicy" value="Picante medio"/><span>🌶️ Medio</span></label><label><input type="radio" name="spicy" value="Bien picante"/><span>🔥 Fuerte</span></label></div></div><label class="note-label">Indicaciones <span>(opcional)</span><textarea id="modalNote" placeholder="Ej. Sin cebolla, sal aparte..." maxlength="120" rows="2"></textarea></label><div class="modal-actions"><div class="qty-picker"><button id="modalMinus" aria-label="Quitar una unidad">−</button><span id="modalQty">1</span><button id="modalPlus" aria-label="Agregar una unidad">+</button></div><button class="add-modal" id="confirmAdd"><span>Agregar al pedido</span><strong id="modalPrice">S/ 0.00</strong></button></div></div></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+LA OLA MARINA — DEMO DE CARTA E-COMMERCE | AGENCIA BLINK
+====================================================
+
+QUÉ INCLUYE
+- Sitio responsive para celular y computadora (HTML, CSS y JS sin frameworks).
+- Carrusel principal con 3 imágenes, flechas, puntos y cambio automático.
+- 4 secciones exactas: Ceviches (5), Para compartir (4), Platos criollos (5), Bebidas (5).
+- Tarjetas con animaciones, movimiento al pasar el cursor y aparición al desplazarse.
+- Ventana para elegir unidades, picante y observaciones.
+- Carrito acumulativo con cambio de cantidades, eliminación y memoria en el navegador.
+- Formulario de pedido: nombre, teléfono, delivery o recojo, dirección/sede/hora y pago.
+- Pedido detallado para enviar por WhatsApp.
+
+IMPORTANTE: ES UNA DEMOSTRACIÓN
+El nombre, las descripciones, los precios, la dirección y las imágenes son ilustrativos.
+Las fotos seleccionadas se cargan desde Pexels al contar con internet.
+Cuando falta conexión, aparece una ILUSTRACIÓN local que corresponde al plato.
+Antes de la publicación comercial, utiliza fotos reales de La Ola Marina para
+representar las presentaciones, tamaños y productos ofrecidos por el restaurante.
+Los datos del cliente no se guardan en una base de datos ni se realizan cobros online.
+El pedido se envía como un mensaje de WhatsApp para confirmar disponibilidad,
+delivery, medios de pago y precio total con el restaurante.
+
+CÓMO CAMBIAR EL NOMBRE Y NÚMERO DE WHATSAPP
+1. Abre js/menu.js con el Bloc de notas o Visual Studio Code.
+2. Al principio encontrarás window.RESTAURANTE. Cambia:
+   nombre: 'La Ola Marina'
+   whatsapp: '519XXXXXXXX'    <-- sin el signo +; es el número receptor
+   direccion: 'Tu dirección'
+   sedes: ['Local principal'] <-- se pueden agregar sedes separadas por comas
+3. Guarda el archivo.
+
+CÓMO CAMBIAR PLATOS, PRECIOS E IMÁGENES
+En js/menu.js, edita los registros de window.PRODUCTOS.
+  nombre: 'Ceviche clásico'
+  descripcion: '...'
+  precio: 32
+  imagen: foto(31495669)  // foto de Pexels (requiere internet)
+
+La identidad original se incluye en img/logo-la-ola-marina.png.
+
+Para reemplazar con una foto propia:
+- Copia la foto JPG o WEBP dentro de la carpeta img.
+- Cambia el campo imagen a: 'img/ceviche-clasico.jpg'
+- Mantén EXACTAMENTE el mismo nombre de archivo (mayúsculas/minúsculas importan).
+Los campos categoria deben ser: ceviches, compartir, criollos o bebidas.
+Puedes cambiar los textos e imágenes del carrusel en window.BANNERS.
+
+CÓMO PUBLICAR EN GITHUB PAGES
+1. Descomprime este archivo ZIP.
+2. En tu repositorio, sube index.html, LEEME-PRIMERO.txt y todas las carpetas
+   css, js e img manteniendo la misma estructura.
+3. En GitHub: Settings > Pages > Build and deployment > Deploy from a branch.
+4. Elige rama main y carpeta /(root) y guarda.
+5. La página aparecerá en https://USUARIO.github.io/NOMBRE-DE-REPOSITORIO/
+
+PARA VERLA EN TU PC
+Abre index.html en Chrome (con conexión a internet para ver las fotos de Pexels).
+
+NOTA PARA ENTREGAS REALES DE BLINK MENÚ
+Antes de vender o publicar: sustituye imágenes, precios y descripciones por la carta
+actual del cliente, añade WhatsApp real, confirma dirección, horarios, sedes,
+disponibilidad de platos y costos de reparto. No colocar números falsos.
+
+Fotografías demostrativas: Pexels (pexels.com), principalmente fotos de Nano Erdozain.
+Licencia: https://www.pexels.com/license/
+
+IMPORTANTÍSIMO: WhatsApp, dirección, sedes, horario y precios siguen siendo
+valores de demostración. NO publicar como carta oficial sin validarlos.
+Las fotografías de Pexels son ilustrativas y NO son fotos del restaurante.
